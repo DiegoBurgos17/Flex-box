@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex; /* Activar Flexbox*/
+    justify-content: space-around; /* Alineacion horizontal */
+    align-items: center; /* Alineacion vertical */
+    background-color: rgb(250, 245, 239); /* Color del fondo del nav */
+}
+
+nav img{
+    width: 150px;
+}
+
+nav a{
+    font-size: 22px; /* Tamaño de text */
+    text-decoration: none; /* Elimina el subrayado del link */
+    font-weight: 300; /* Grosor del texto */
+    color: black; /* Color de los enlaces */
+
+    padding: 16px; /* Espacio dentro de los enlaces */
+    transition: 0.7s; /* Tiempo para volver a estado normal */
+    border-radius: 15px; /* Bores redondeados */
+}
+
+nav a:hover{
+    background-color: rgb(156, 218, 192);
+    transition: 0.7s;
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-around; /*Alineación horizontal*/
+    flex-wrap: wrap; /*Usar varias líneas*/
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column; /*Para ordenar los elementos en vertical*/
+    align-items: center; /*Aliner texto e imagen al centro*/
+    gap: 8px; /*Separación*/
+    margin: 10px;
+}
+
+.servicio img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover; /*Para que la imagen llene el espacio sin deformarse*/
+    border-radius: 10px; /*Borde redondeado*/
+}
+
+@media (width < 660px) { /*Si la pantalla es muy pequeña*/ 
+    nav {
+        display: flex;
+        flex-direction: column; /*Menú vertical si la pantalla es pequeña*/
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /*Separación entre links*/
+    }
+}
